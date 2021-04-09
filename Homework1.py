@@ -28,8 +28,8 @@ class Fraction:
         print(denum)
 
     def sub(self, other):
-        num = self.num * other.num
-        denum = self.denum * other.denum
+        num = self.num - other.num
+        denum = self.denum
         print(num)
         print("-")
         print(denum)
