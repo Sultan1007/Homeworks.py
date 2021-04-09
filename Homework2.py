@@ -17,6 +17,25 @@ class Complex:
         new_complex = Complex(real, imag)
         return new_complex
 
+    def __sub__(self, other):
+        real = self.real + other.real
+        imag = self.imag + other.imag
+        new_complex = Complex(real, imag)
+        return new_complex
+
+    def __truediv__(self, other):
+        real = self.real + other.real
+        imag = self.imag + other.imag
+        new_complex = Complex(real, imag)
+        return new_complex
+
+    def __mul__(self, other):
+        real = self.real + other.real
+        imag = self.imag + other.imag
+        new_complex = Complex(real, imag)
+        return new_complex
+
+
     def __str__(self):
         return f"{self.real} + {self.imag}i"
 
