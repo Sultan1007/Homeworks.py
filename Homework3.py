@@ -1,26 +1,51 @@
-class Word:
-    def __init__(self, word, help):
-        pass
-
-    def check_letter(self, letter):
-        pass
+import random
 
 
-arr = [Word('nos'), Word('lico'), Word('uho')]
+def Viselitsa(Word):
+    print('VREMYA IGRAT VISELITSA')
 
 
-class Game:
-    # 1 - 3hp, 2  - 2hp, 3 - 1hp
-    def __init__(self, round, dif):
-        pass
-        self.hp = dif
+dictionary = ['osyol', 'eshek', 'mango', 'kymyz', 'moloko', 'chipsy']
+secret = random.choice(dictionary)
+guesses = 'aeiou'
+popytki = 5
 
-    def play(self):
-        pass
+while popytki > 0:
+    missed = 0
+    for letter in secret:
+        if letter in guesses:
+            print(letter, end=' ')
 
+        else:
+            print('_', end=' ')
+            missed = missed + 1
 
-diff = input()
-round_num = input()
+    print()
 
-g = Game(round_num, diff)
-g.play()
+    if missed == 0:
+        print('\nYou win, KRASAVCHIK!')
+        break
+
+    guess = input('\nguess a letter: ')
+    guesses += guess
+
+    if guess not in secret:
+        popytki = popytki - 1
+        print('\nNope.')
+        print('\n', popytki, 'more popytok')
+        if popytki < 5: print('\n  |  ')
+        if popytki < 4: print('  O  ')
+        if popytki < 3: print(' /|\ ')
+        if popytki < 2: print('  |  ')
+        if popytki < 1: print(' / \ ')
+        if popytki == 0:
+            print('\n\nThe answer is', secret)
+
+yesOrNo = ' yes'
+while yesOrNo == ' yes':
+    # Viselitsa()
+    yesOrNo = input('Do you want play again? (yes or no)')
+    if yesOrNo != "no":
+        continue
+    elif yesOrNo == "yes":
+        break
