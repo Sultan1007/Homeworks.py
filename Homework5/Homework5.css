@@ -1,0 +1,42 @@
+p {
+    color: blue;
+    text-align: center;
+    padding: 20px;
+    size: 600px;
+    font-family: "Bookman Old Style";
+}
+#link {
+    color: blue;
+}
+p2{
+    padding: 500px;
+    text-align:  center;
+    size: 600px;
+    color: red;
+    font-family: "Bookman Old Style";
+}
+img{
+    img-align: center;
+    size:500px;
+    padding: 10;
+}
+
+h1{
+    color: red;
+    padding: 50px;
+    text-align: center;
+    size: 200px;
+}
+h2{
+    color: blue;
+    text-align: center;
+}
+h3{
+    text-align: center;
+    size: 500px;
+    padding: 50px;
+}
+
+body {
+    background-color: yellow;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My page</title>
+    <link rel="stylesheet" href="Homework5.css">
+</head>
+<body id="body">
+<h1 class="abc">SULTAN KELSINBEKOV</h1>
+<h2>BLOGGER|PROGRAMMER</h2>
+<h3>MINI-BIOGRAPHY</h3>
+<!--<p id="link">Github: <a href="https://github.com/">Link</a></p>-->
+<img id="img" src="01.jpg" alt="SK"
+     width="500px">
+<p class="abc">Султан родился в Кыргызстане, в селе Джаны-Жер. Сейчас живет в Бишкеке и учится в школе, заканчивает 10ый класс. Также
+учится в школе программирования GeekTech на Python(BackEnd) разработчика. В его семье 5 человек: папа, мама, брат, он и сестренка.
+Он любит играть в футбол и играть на пианино. Он любит спорт и считает себя спортсменом. Любит еще играть в теннис, волейбол. Он умеет
+играть на гитаре и продолжает учиться играть на пианино и на гитаре. Он очень хочет младшего брата. У него большое будущее!</p>
+<p2 class="abc">INST: @sultan_kelsin FOllOW please)</p2>
+<script type="text/javascript">
+    const body = document.getElementById('img');
+    let deg = 720;
+    setInterval(() => {
+        deg = 180;
+        body.style.transition = "all 100s"
+        body.style.transform = `rotateX(${deg}deg)`
+    }, 100)
+</script>
+</body>
+</html>
