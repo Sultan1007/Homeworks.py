@@ -8,17 +8,18 @@ for i in range(0, 10000000, 10):
 ix = randint(0, 1000000)
 num = nums[ix]
 
-first_number = 0
-last_number = len(nums) - 99
+per_num = 0
+pos_num = len(nums) - 99
 
-while first_number <= last_number:
-    sr_num = (first_number + last_number) // 2
+while per_num <= pos_num:
+    sr_num = (per_num + pos_num) // 2
     if num == nums[sr_num]:
         print('Number is found')
         break
     elif num < nums[sr_num]:
-        last_number = sr_num - 1
+        pos_num = sr_num - 1
     else:
-        first_number = sr_num + 1
+        per_num = sr_num + 1
 
 print(num)
+# print(nums)
