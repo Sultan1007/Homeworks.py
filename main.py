@@ -1,36 +1,23 @@
-class BankAccount:
+import sqlite3
+from sqlite3 import Error
 
-    def init(self, name, balance):
-        self._name = name
-        self._balance = balance
+def create_connection(path):
+    connection = None
+    try:
+        connection = sqlite3.connect(path)
+        print("Connection to SQLite DB successful")
+    except Error as e:
+        print(f"The error '{e}' occurred")
 
-    @property
-    def name(self):
-        return f"My account's number {self._name}"
+    return connection
 
-    @name.setter
-    def name(self, name):
-        self._name = name
-
-    @property
-    def balance(self):
-        return f"user account: {self._balance} Euro"
-
-    # @name.setter
-    # def name(self, name):
-    #     if name == "name":
-    #         raise ValueError("System error!")
-    #     self._name = name
-
-    @balance.setter
-    def balance(self, balance):
-        if balance < 0:
-            raise ValueError("System error!")
-        self._balance = balance
+def execute_query(connection, query):
+    cursor = connection.cursor()
+    try:
+        cursor.execute(query)
+        connection.commit()
+        print("Query executed successfully")
+    except Error as e:
+        print(f"The error '{e}' occurred")
 
 
-account = BankAccount()
-account.name = 12859315
-print(account.name)
-account.balance = 1000000000
-print(account.balance)
